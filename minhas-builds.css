@@ -1,0 +1,215 @@
+/* RESET BÁSICO */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* FUNDO GERAL */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #000;
+  color: #fff;
+  min-height: 100vh;
+  background-image: url('image/fundo.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+/* Test */
+.top-bar {
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(106, 13, 173, 0.9);
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.back-button {
+  display: inline-block;
+  margin: 1rem 0 0 1rem;
+  /* distância do menu */
+  background: #6a0dad;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.profile-area {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.profile-pic {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-image: url('image/icone.jpg');
+  background-size: cover;
+  background-position: center;
+  border: 3px solid #fff;
+  cursor: pointer;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-info strong {
+  font-size: 1.2rem;
+}
+
+.profile-info small {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.profile-links {
+  margin-top: 0.3rem;
+}
+
+.profile-links a {
+  color: #ccc;
+  text-decoration: none;
+  margin-right: 1rem;
+  font-size: 0.85rem;
+}
+
+.menu {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.menu label {
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+}
+
+.menu label::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: #fff;
+  left: 0;
+  bottom: -4px;
+  transition: width 0.3s;
+}
+
+.menu label:hover::after {
+  width: 100%;
+}
+
+/* TOPO */
+.top-bar {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.top-bar h1 {
+  font-size: 22px;
+}
+
+.back-btn {
+  color: #c13de6;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.back-btn:hover {
+  text-decoration: underline;
+}
+
+/* CONTAINER */
+.builds-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 24px;
+  padding: 20px;
+}
+
+/* CARD */
+.build-card {
+  background: linear-gradient(180deg, #1a1f3c, #12162d);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
+}
+
+.build-card:hover {
+  transform: scale(1.04);
+  box-shadow: 0 0 18px rgba(193, 61, 230, 0.35);
+}
+
+/* IMAGEM DO CAMPEÃO */
+.build-header {
+  height: 140px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.champ-name {
+  position: absolute;
+  bottom: 8px;
+  left: 10px;
+  font-weight: bold;
+  background: rgba(0,0,0,0.6);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* CORPO */
+.build-body {
+  padding: 12px;
+}
+
+/* LINHAS DE ITENS */
+.build-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+/* ITENS */
+.item {
+  width: 42px;
+  height: 42px;
+  background: #2a2f55;
+  border-radius: 6px;
+  border: 1px solid #3a3f6a;
+}
+
+/* BOTA */
+.item.boot {
+  border: 1px solid #c13de6;
+}
+
+/* ESCONDE BUILD COMPLETA */
+.build-row.full {
+  display: none;
+}
+
+/* MOSTRA AO HOVER (ESTILO MOBAFIRE) */
+.build-card:hover .build-row.full {
+  display: flex;
+}
